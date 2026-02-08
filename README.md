@@ -9,7 +9,7 @@ Tired of opening Visual Studios Code (or any other programming software you use)
 - open console button (WARNING: MAY NOT SAVE THE CURRENT LINES WHEN YOU CLOSE CONSOLE AND THEN REOPEN!)
 
 # Instructions
-1 - Move the downloaded file into your bot folder project or to download fast, run in your powershell on vs code or any programming software: `git clone https://github.com/WinterToasterteam/Discord-Bot-Control-Panel-Dashboard-Application-Window`
+1 - Move the downloaded file (download it from published) into your bot folder project or to download fast, run in your powershell on vs code or any programming software: `git clone https://github.com/WinterToasterteam/Discord-Bot-Control-Panel-Dashboard-Application-Window`
 (FOR THE 2nd OPTION ON DOWNLOADING IN POWERSHELL: MAKE SURE TO HAVE git DOWNLOADED OR IT MIGHT NOT BE RECOGNIZED! AFTER DOWNLOADING git PUT IT IN SYSTEM PATH!)
 
 2 - download venv and have Python 3.8 or higher:
