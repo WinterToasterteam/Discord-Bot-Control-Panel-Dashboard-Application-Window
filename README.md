@@ -16,7 +16,7 @@ Tired of opening Visual Studios Code (or any other programming software you use)
 
 `python -m venv venv` (create an virtual environment to prevent globals to be interfered with its dependencies)
 
-3 - create additional changes to `window.py` as putting your own `.png`, `.wav` `sounds` and extras!
+3 - create additional changes to `dashboard.py` as putting your own `.png`, `.wav` `sounds` and extras!
 
 # Installing latency correctly
 1 - for the latency system, in your bot project, create: `latency.json`
