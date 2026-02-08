@@ -35,12 +35,12 @@ async def latency_task():
             json.dump({"latency": latency_ms}, f)
     except Exception as e:
         print("Latency write error:", e)
-
+```
 # after creating latency_task, put this under @bot.event below the on_ready event:
-
+```python
 if not latency_task.is_running():
     latency_task.start()
-
+```
 congrats! you also installed the latency system! if you have any issues, please reach out to my discord: toasterteam
 little notes on the script:
 - while the bot is online and you reopen the dashboard (or whatever you like to call it), it will show as "OFFLINE", i will later fix that soon.
