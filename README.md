@@ -9,19 +9,19 @@ Tired of opening Visual Studios Code (or any other programming software you use)
 - open console button (WARNING: MAY NOT SAVE THE CURRENT LINES WHEN YOU CLOSE CONSOLE AND THEN REOPEN!)
 
 # Instructions
-1 - Move the downloaded file into your bot folder project or to download fast, run in your powershell on vs code or any programming software: git clone https://github.com/WinterToasterteam/Discord-Bot-Control-Panel-Dashboard-Application-Window
+1 - Move the downloaded file into your bot folder project or to download fast, run in your powershell on vs code or any programming software: `git clone https://github.com/WinterToasterteam/Discord-Bot-Control-Panel-Dashboard-Application-Window`
 (FOR THE 2nd OPTION ON DOWNLOADING IN POWERSHELL: MAKE SURE TO HAVE git DOWNLOADED OR IT MIGHT NOT BE RECOGNIZED! AFTER DOWNLOADING git PUT IT IN SYSTEM PATH!)
 
 2 - download venv and have Python 3.8 or higher:
 
 `python -m venv venv` (create an virtual environment to prevent globals to be interfered with its dependencies)
 
-3 - create additional changes to window.py as putting your own .png, .wav sounds and extras!
+3 - create additional changes to `window.py` as putting your own `.png`, `.wav` `sounds` and extras!
 
 # Installing latency correctly
-1 - for the latency system, in your bot project, create: latency.json
+1 - for the latency system, in your bot project, create: `latency.json`
 
-2 - after creating latency.json, go to your bot.py or main.py, then make this above your @bot.event:
+2 - after creating `latency.json`, go to your `bot.py` or `main.py`, then make this above your `@bot.event`:
 
 ```python
 @tasks.loop(seconds=1)
@@ -36,7 +36,7 @@ async def latency_task():
     except Exception as e:
         print("Latency write error:", e)
 ```
-# after creating latency_task, put this under @bot.event below the on_ready event:
+3- after creating latency_task, put this under `@bot.event` below the `on_ready` event:
 ```python
 if not latency_task.is_running():
     latency_task.start()
