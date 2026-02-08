@@ -23,7 +23,7 @@ python -m venv venv (create an virtual environment to prevent globals to be inte
 
 2 - after creating latency.json, go to your bot.py or main.py, then make this above your @bot.event:
 
-```
+```python
 @tasks.loop(seconds=1)
 async def latency_task():
     bot_dir = os.path.dirname(os.path.abspath(__file__))
@@ -36,11 +36,11 @@ async def latency_task():
     except Exception as e:
         print("Latency write error:", e)
 
-and now after making latency_task, put this under @bot.event below the on_ready event:
-
-    if not latency_task.is_running():
-        latency_task.start()
+# after creating latency_task, put this under @bot.event below the on_ready event:
+if not latency_task.is_running():
+    latency_task.start()
 ```
+
 congrats! you also installed the latency system! if you have any issues, please reach out to my discord: toasterteam
 little notes on the script:
 - while the bot is online and you reopen the dashboard (or whatever you like to call it), it will show as "OFFLINE", i will later fix that soon.
