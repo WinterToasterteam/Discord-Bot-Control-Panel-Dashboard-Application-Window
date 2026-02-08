@@ -14,7 +14,7 @@ Tired of opening Visual Studios Code (or any other programming software you use)
 
 2 - download venv and have Python 3.8 or higher:
 
-python -m venv venv (create an virtual environment to prevent globals to be interfered with its dependencies)
+`python -m venv venv` (create an virtual environment to prevent globals to be interfered with its dependencies)
 
 3 - create additional changes to window.py as putting your own .png, .wav sounds and extras!
 
