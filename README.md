@@ -41,6 +41,26 @@ async def latency_task():
 if not latency_task.is_running():
     latency_task.start()
 ```
+once finished, it should look like this:
+```python
+@tasks.loop(seconds=1)
+async def latency_task():
+    bot_dir = os.path.dirname(os.path.abspath(__file__))
+    latency_path = os.path.join(bot_dir, "latency.json")
+
+    try:
+        latency_ms = round(bot.latency * 1000)
+        with open(latency_path, "w") as f:
+            json.dump({"latency": latency_ms}, f)
+    except Exception as e:
+        print("Latency write error:", e)
+
+@bot.event
+async def on_ready():
+    print(f"logged in as {bot.user}")
+    if not latency_task.is_running():
+        latency_task.start()
+```
 congrats! you also installed the latency system! if you have any issues, please reach out to my discord: toasterteam
 little notes on the script:
 - while the bot is online and you reopen the dashboard (or whatever you like to call it), it will show as "OFFLINE", i will later fix that soon.
